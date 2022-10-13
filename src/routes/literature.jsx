@@ -1,9 +1,13 @@
 import React from "react";
 import { useContext } from "react";
 import { CMSContext } from "../useContetful";
+import { Breadcrumbs } from "@material-tailwind/react";
 
 export default function Literature() {
   const { literature } = useContext(CMSContext);
-  console.log(literature);
-  return <div>literature</div>;
+  return (
+    <div>
+      <h2>literature</h2>
+    </div>
+  );
 }

@@ -7,6 +7,7 @@ const CMSContextProvider = (props) => {
   const [art, setArt] = useState([]);
   const [literature, setLiterature] = useState([]);
   const [music, setMusic] = useState([]);
+  // const [searchQuery, setSearchQuery] = useState([]);
 
   useEffect(() => {
     const client = createClient({
@@ -53,6 +54,8 @@ const CMSContextProvider = (props) => {
         setLiterature,
         music,
         setMusic,
+        // searchQuery,
+        // setSearchQuery,
       }}
     >
       {props.children}

@@ -13,11 +13,12 @@ export default function Root() {
     setSearch(e.target.firstChild.value);
   };
 
+  const homesearch = fart.music.concat(fart.art, fart.literature)
   const filterData = (data) => {
     const work = data.filter((item) =>
       item.fields.title.toLowerCase().includes(search.toLowerCase())
     );
-    console.log(work);
+    console.log('wor', work);
   };
 
   useEffect(() => {
@@ -25,10 +26,10 @@ export default function Root() {
       window.location.pathname === "/art"
         ? fart.art
         : window.location.pathname === "/music"
-        ? fart.music
-        : window.location.pathname === "/literature"
-        ? fart.literature
-        : [];
+          ? fart.music
+          : window.location.pathname === "/literature"
+            ? fart.literature
+            : homesearch //fart.music.concat(fart.art, fart.literature); 
     filterData(searchArray);
     console.log(searchArray);
   }, [search]);

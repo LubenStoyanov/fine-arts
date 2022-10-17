@@ -10,9 +10,11 @@ export async function loader() {
   const books = await getBooks();
   return { books };
 }
+
 export default function Hero() {
   const { books } = useLoaderData();
   const book = sample(books);
+
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">

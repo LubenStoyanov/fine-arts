@@ -3,7 +3,6 @@ export default function search(searchTerm, art, books, music) {
   const works = data
     .map((work) => work)
     .filter((work) => {
-      // console.log(work.fields.title, work.fields.artist, searchTerm);
       return work.fields.title.toLowerCase().trim().includes(searchTerm)
         ? work
         : work.fields.artist &&

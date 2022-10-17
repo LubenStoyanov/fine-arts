@@ -1,27 +1,7 @@
-import { useForm } from "react-hook-form";
 import React from "react";
 import { Form } from "react-router-dom";
 
-export async function loader() {
-  const data = [];
-}
-
 export default function Searchbar() {
-  // const { register, handleSubmit, setValue } = useForm();
-  // const onSubmit = (data) => setValue("search", "");
-  // return (
-  //   <div>
-  //     <form onSubmit={handleSubmit(onSubmit)}>
-  //       <input
-  //         type="text"
-  //         placeholder="Search your favorit artist"
-  //         className="input input-bordered w-full max-w-xs"
-  //         {...register("search")}
-  //       />
-  //     </form>
-  //   </div>
-  // );
-
   return (
     <div>
       <Form method="get" action="/works">

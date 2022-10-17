@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root, { loader as rootLoader } from "./routes/Root";
+import Root from "./routes/Root";
 import "./index.css";
 import Literature, { loader as literatureLoader } from "./routes/Literature";
 import Music from "./routes/Music";
@@ -14,7 +14,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    loader: rootLoader,
     children: [
       {
         path: "/",

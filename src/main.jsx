@@ -1,13 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import Root from "./routes/root";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./routes/Root";
 import "./index.css";
-import Literature from "./routes/literature";
-import Music from "./routes/music";
-import Art from "./routes/art";
-import CMSContextProvider from "./useContetful";
-import { ThemeProvider } from "@material-tailwind/react";
+import Literature, { loader as literatureLoader } from "./routes/Literature";
+import Music from "./routes/Music";
+import Art from "./routes/Art";
+import CMSContextProvider from "./data/cmsContext";
+import Works, { loader as worksLoader } from "./routes/Works";
+import Hero, { loader as heroLoader } from "./routes/Hero";
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,14 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
+        path: "/",
+        element: <Hero />,
+        loader: heroLoader,
+      },
+      {
         path: "literature",
         element: <Literature />,
+        loader: literatureLoader,
       },
       {
         path: "music",
@@ -26,16 +33,19 @@ const router = createBrowserRouter([
         path: "art",
         element: <Art />,
       },
+      {
+        path: "works",
+        element: <Works />,
+        loader: worksLoader,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ThemeProvider>
-      <CMSContextProvider>
-        <RouterProvider router={router} />
-      </CMSContextProvider>
-    </ThemeProvider>
+    <CMSContextProvider>
+      <RouterProvider router={router} />
+    </CMSContextProvider>
   </React.StrictMode>
 );

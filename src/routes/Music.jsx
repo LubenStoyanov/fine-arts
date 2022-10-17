@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { CMSContext } from "../useContetful";
+import { CMSContext } from "../data/cmsContext";
 
 export default function Music() {
   const { music } = useContext(CMSContext);

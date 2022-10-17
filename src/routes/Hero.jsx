@@ -17,7 +17,7 @@ export default function Hero() {
 
   return (
     <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row">
+      <div className="hero-content flex-col">
         <div>
           <h1 className="text-5xl font-bold">Enjoy the works</h1>
           <p className="py-6">

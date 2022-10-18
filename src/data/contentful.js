@@ -18,6 +18,7 @@ const contentful = () => {
       console.log(`my error: ${error}`);
     }
   };
+
   const getMusic = async () => {
     try {
       const entries = await client.getEntries({
@@ -30,6 +31,7 @@ const contentful = () => {
       console.log(`my error: ${error}`);
     }
   };
+
   const getArt = async () => {
     try {
       const entries = await client.getEntries({

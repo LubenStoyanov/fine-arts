@@ -22,11 +22,22 @@ export default function Works() {
 
   const mappedWorks = works.map((work) => (
     <div key={work.sys.id}>
-      <label className="swap swap-flip text-9xl">
+      <label className="swap swap-flip">
         <input type="checkbox" />
         <div className="swap-on">
-          <div className="card card-compact w-60 sm:w-full sm:h-full bg-base-100 shadow-xl">
-            😈
+          <div className="flex-col items-center justify-center font-bold card card-compact w-60 sm:w-full sm:h-full bg-base-100 shadow-xl">
+            <h2 className="text-center">{work.fields.title}</h2>
+            <span className="text-center">by</span>
+            <p className="text-center">
+              {work.fields.author ? work.fields.author : work.fields.artist}
+            </p>
+            <a
+              target="blank"
+              href={work.fields.link}
+              className="btn btn-primary w-40 self-center "
+            >
+              More Info
+            </a>
           </div>
         </div>
         <div className="card card-compact w-60 sm:w-max sm:h-max bg-base-100 shadow-xl swap-off">

@@ -25,7 +25,7 @@ export default function Literature() {
               href={book.fields.link}
               target="_blank"
             >
-              <p className="m-6 ">
+              <p className="m-6">
                 {book.fields.title} <br />
               </p>
             </a>

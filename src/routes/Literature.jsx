@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import contentful from "../data/useContentful";
+import contentful from "../data/contentful";
 
 export async function loader() {
   const { getBooks } = contentful();

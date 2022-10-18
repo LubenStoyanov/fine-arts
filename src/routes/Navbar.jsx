@@ -34,7 +34,9 @@ export default function Navbar() {
             <li>
               <Link to={`music`}>Music</Link>
             </li>
-            <li>{/* <Link to={`art`}>Art</Link> */}</li>
+            <li>
+              <Link to={`art`}>Art</Link>
+            </li>
             <li>
               <Link to={`literature`}>Literature</Link>
             </li>
@@ -46,7 +48,9 @@ export default function Navbar() {
           <li>
             <Link to={`music`}>Music</Link>
           </li>
-          <li>{/* <Link to={`art`}>Art</Link> */}</li>
+          <li>
+            <Link to={`art`}>Art</Link>
+          </li>
           <li>
             <Link to={`literature`}>Literature </Link>
           </li>

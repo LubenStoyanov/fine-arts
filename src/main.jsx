@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import Literature, { loader as literatureLoader } from "./routes/Literature";
-import Music from "./routes/Music";
-import Art from "./routes/Art";
+import Music, { loader as musicLoader } from "./routes/Music";
+import Art, { loader as artLoader } from "./routes/Art";
 import Works, { loader as worksLoader } from "./routes/Works";
 import Hero, { loader as heroLoader } from "./routes/Hero";
 import "./index.css";
@@ -27,10 +27,12 @@ const router = createBrowserRouter([
       {
         path: "music",
         element: <Music />,
+        loader: musicLoader,
       },
       {
         path: "art",
         element: <Art />,
+        loader: artLoader,
       },
       {
         path: "works",

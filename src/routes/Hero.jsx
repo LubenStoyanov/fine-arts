@@ -2,7 +2,7 @@ import React from "react";
 import RandomBook from "../components/RandomBook";
 import Searchbar from "./Searchbar";
 import { useLoaderData } from "react-router-dom";
-import contentful from "../data/useContentful";
+import contentful from "../data/contentful";
 import { sample } from "lodash";
 
 export async function loader() {
@@ -27,6 +27,7 @@ export default function Hero() {
           </p>
         </div>
         <RandomBook book={book} />
+
         <Searchbar />
       </div>
     </div>

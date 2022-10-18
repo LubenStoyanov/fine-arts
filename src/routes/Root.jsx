@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 
 export default function Root() {
   return (
-    <>
+    <div className="h-screen">
       <Navbar />
       <Outlet />
-    </>
+    </div>
   );
 }

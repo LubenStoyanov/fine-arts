@@ -34,7 +34,9 @@ export default function Hero() {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button onClick={forceUpdate}>Get Random Art</button>
+          <div className="felx justify-center">
+            <button className=" btn btn-primary" onClick={forceUpdate}>Get Random Art</button>
+          </div>
         </div>
         <div className="flex space-x-10">
           <RandomBook book={book} />

@@ -14,18 +14,17 @@ export default function Music() {
 
   const mappedMusic = music.map((song) => (
     <div>
-      <label className="swap swap-flip text-9xl">
+      <label className="swap swap-flip text-s">
         <input type="checkbox" />
         <div className="swap-on">
           <div
-            className="card card-compact w-60 sm:w-40 bg-base-100 shadow-xl"
-            key={song.sys.id}
-          >
-            😈
+            className="card card-compact w-100 sm:w-40 bg-base-100 shadow-xl"
+            key={song.sys.id}>
+            <iframe src={song.fields.link} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
         <div
-          className="card card-compact w-60 sm:w-40 bg-base-100 shadow-xl swap-off"
+          className="card card-compact w-100 sm:w-40 bg-base-100 shadow-xl swap-off"
           key={song.sys.id}
         >
           <figure>

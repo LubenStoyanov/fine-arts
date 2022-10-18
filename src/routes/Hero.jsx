@@ -30,15 +30,15 @@ export default function Hero() {
         <div>
           <h1 className="text-5xl font-bold">Enjoy the Art</h1>
           <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Experience 3 types of different fine art genres.
           </p>
-          <div className="felx justify-center">
-            <button className=" btn btn-primary" onClick={forceUpdate}>Get Random Art</button>
+          <div className="flex justify-center">
+            <button className=" btn btn-primary" onClick={forceUpdate}>
+              Get Random Art
+            </button>
           </div>
         </div>
-        <div className="flex space-x-10">
+        <div className="flex flex-col sm:flex-row space-x-10">
           <RandomBook book={book} />
           <RandomArt fart={fart} />
           <RandomMusic song={song} />

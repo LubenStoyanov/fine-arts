@@ -6,7 +6,7 @@ export default function RandomMusic({ song }) {
       <img
         src={song.fields.cover.fields.file.url}
         className="max-w-sm rounded-lg shadow-2xl"
-        height="307"
+        style={{ width: "auto", height: 300, objectFit: "contain" }}
       />
     </div>
   );

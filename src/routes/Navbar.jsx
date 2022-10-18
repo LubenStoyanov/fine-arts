@@ -5,8 +5,8 @@ export default function Navbar() {
   return (
     <div data-theme="garden" className="navbar">
       <div className="navbar-start text-primary">
-        <Link to={`/`} className="btn btn-ghost normal-case text-xl ">
-          The Fine Art
+        <Link to={`/`} className="btn btn-ghost w-20 normal-case text-xl ">
+          <img src="/Logo2.png" />
         </Link>
       </div>
       <div className="navbar-end">

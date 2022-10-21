@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import contentful from "../data/contentful";
+import contentful from "../data/fetchData";
 
 export async function loader() {
   const { getMusic } = contentful();
@@ -19,8 +19,15 @@ export default function Music() {
         <div className="swap-on">
           <div
             className="card card-compact w-100 sm:w-40 bg-base-100 shadow-xl"
-            key={song.sys.id}>
-            <iframe src={song.fields.link} title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            key={song.sys.id}
+          >
+            <iframe
+              src={song.fields.link}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
         <div

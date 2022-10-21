@@ -4,7 +4,7 @@ import RandomArt from "../components/RandomArt";
 import RandomMusic from "../components/RandomMusic";
 import Searchbar from "./Searchbar";
 import { Link, useLoaderData } from "react-router-dom";
-import contentful from "../data/contentful";
+import contentful from "../data/fetchData";
 import { sample } from "lodash";
 import useForceUpdate from "use-force-update";
 
@@ -13,6 +13,7 @@ export async function loader() {
   const books = await getBooks();
   const art = await getArt();
   const music = await getMusic();
+
   return { books, art, music };
 }
 

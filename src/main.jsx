@@ -8,6 +8,9 @@ import Art, { loader as artLoader } from "./routes/Art";
 import Works, { loader as worksLoader } from "./routes/Works";
 import Hero, { loader as heroLoader } from "./routes/Hero";
 import "./index.css";
+import HeroBook from "./routes/HeroBook";
+import HeroMusic from "./routes/HeroMusic";
+import HeroArt from "./routes/HeroArt";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
         path: "works",
         element: <Works />,
         loader: worksLoader,
+      },
+      {
+        path: "heroBook/:bookId",
+        element: <HeroBook />,
+      },
+      {
+        path: "heroMusic/:songId",
+        element: <HeroMusic />,
+      },
+      {
+        path: "heroArt/:artId",
+        element: <HeroArt />,
       },
     ],
   },

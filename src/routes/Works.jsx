@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import contentful from "../data/contentful";
+import contentful from "../data/fetchData";
 import search from "../search";
 
 export async function loader({ request }) {

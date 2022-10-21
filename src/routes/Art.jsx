@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom/dist";
 import { useLoaderData } from "react-router-dom";
 import shuffle from "lodash/shuffle";
-import contentful from "../data/contentful";
+import contentful from "../data/fetchData";
 import { flip } from "lodash";
 
 export async function loader() {

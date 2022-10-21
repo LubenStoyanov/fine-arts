@@ -1,4 +1,5 @@
-import { createClient } from "contentful";
+import pkg from "contentful";
+const { createClient } = pkg;
 
 const contentful = () => {
   const client = createClient({

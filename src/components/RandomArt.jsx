@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import useContentful from "../data/contentful";
 
 const RandomArt = ({ fart }) => {
-  console.log(fart);
+  // console.log(fart);
   return (
     <div className="basis-1/3 sm:w-max sm:h-max">
       <img

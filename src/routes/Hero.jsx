@@ -3,7 +3,7 @@ import RandomBook from "../components/RandomBook";
 import RandomArt from "../components/RandomArt";
 import RandomMusic from "../components/RandomMusic";
 import Searchbar from "./Searchbar";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import contentful from "../data/contentful";
 import { sample } from "lodash";
 import useForceUpdate from "use-force-update";
@@ -39,9 +39,15 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row space-x-10">
-          <RandomBook book={book} />
-          <RandomArt fart={fart} />
-          <RandomMusic song={song} />
+          <Link to={`heroBook/:bookId`}>
+            <RandomBook book={book} />
+          </Link>
+          <Link to={`heroArt/:${fart.fields.title}`}>
+            <RandomArt fart={fart} />
+          </Link>
+          <Link to={`heroMusic/:songId`}>
+            <RandomMusic song={song} />
+          </Link>
         </div>
         <div>
           <Searchbar />
